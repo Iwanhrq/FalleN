@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Entre em contato!</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpg" href="imagens/contatoicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script language="javascript" type="text/javascript">
+        function validar() {
+            var nome = form1.nome.value;
+            var email = form1.email.value;
+            var cidade = form1.cidade.value;
+
+            if (nome == "") {
+                alert('Preencha o campo com seu nome');
+                form1.nome.focus();
+                return false;
+            }
+
+            if (email == "") {
+                alert('Preencha o campo com seu email');
+                form1.email.focus();
+                return false;
+            }
+
+            if (cidade == "") {
+                alert('Preencha o campo com sua cidade');
+                form1.cidade.focus();
+                return false;
+            }
+
+            if (nome.length < 3) {
+                alert('Digite seu nome completo');
+                form1.nome.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body background="imagens/fallenwallpaper2.png">
+    <nav id="menu">
+        <ul>
+            <li> <img class="iconmenu" src="imagens/fallenicon.png"> </li>
+            <li> <a href="index.html"><i class="material-symbols-outlined">home</i> Home</a></li>
+            <li> <a href="origem.html"><i class="material-symbols-outlined">history_edu</i> Origem</a></li>
+            <li> <a href="galeria.html"><i class="material-symbols-outlined">gallery_thumbnail</i> Galeria</a></li>
+            <li> <a href="premio.html"><i class="material-symbols-outlined">military_tech</i> Prêmios</a></li>
+            <li> <a href="contato.html"><i class="material-symbols-outlined">contacts</i> Contato</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <aside>
+            <div class="contato-container">
+                <h1>Entre em contato conosco!</h1>
+                <p>Preencha todos os campos abaixo.</p>
+            </div>
+            <form name="form1" onsubmit="return validar()" action="congratulations.html" method="post">
+                <input type="text" name="nome" placeholder="Nome">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="cidade" placeholder="Cidade">
+                <textarea cols="35" rows="9" name="Obs" placeholder="Deixe sua observação"></textarea>
+                <div class="button-container">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" name="limpa" value="Limpar">
+                </div>
+            </form>
+        </aside>
+    </main>
+
+    <hr class="contato-hr">
+    <h5>Ivan Silva 2023 - &copyTodos os direitos reservados</h5>
+</body>
+
+</html>
